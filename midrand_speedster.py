@@ -14,14 +14,14 @@ driver_speed = int(input("Enter your current speed: "))
 allowed_speed = int(input("Enter the average allowed speed: "))
 
 # HERE WE CHECK IF DRIVERS SPEED IS LESS THAN 60 KM/H
-if driver_speed <= 60:
+if driver_speed <= allowed_speed:
     # IF YES, PRINT OK
     print("Ok")
 # OTHERWISE...
 else:
     # TO GET THE AMOUNT OF POINTS TO GIVE THE DRIVER, WE HAVE TO GET THE DIFFERENCE BETWEEN THE DRIVERS SPEED AND THE
     # ACTUAL SPEED LIMIT...
-    difference = driver_speed - 60
+    difference = driver_speed - allowed_speed
     # ...THEN DIVIDE IT BY 5, TO GET THE PROPER AMOUNT OF POINTS
     demerit_points = difference / 5
     # WE CONVERT THE demerit_points TO AN INTEGER TO GET RID OF THE DECIMAL NUMBERS
